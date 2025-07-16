@@ -29,6 +29,46 @@
                     Nos esforzamos por crear un entorno que celebre la pasión por la lectura y el aprendizaje, y esperamos que encuentres en nuestra biblioteca un aliado en tu viaje intelectual..</p>
             </div>
         </div>
+        <button onclick="obtenerUbicacion()">Mostrar mi ubicación</button>
+  <div id="map"></div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoHI7ebF_B-vYDY5fItyhDCYbnalNR1Yw"></script>
+        <script>
+    let map;
+
+    function initMap(lat, lng) {
+      const ubicacion = new google.maps.LatLng(lat, lng);
+
+      const opciones = {
+        center: ubicacion,
+        zoom: 15
+      };
+
+      map = new google.maps.Map(document.getElementById('map'), opciones);
+
+      new google.maps.Marker({
+        position: ubicacion,
+        map: map,
+        title: "Estás aquí"
+      });
+    }
+
+    function obtenerUbicacion() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (pos) => {
+            const lat = pos.coords.latitude;
+            const lng = pos.coords.longitude;
+            initMap(lat, lng);
+          },
+          (error) => {
+            alert("Error al obtener la ubicación: " + error.message);
+          }
+        );
+      } else {
+        alert("Geolocalización no es soportada por este navegador.");
+      }
+    }
+  </script>
     </main>
 </body>
 </html>
