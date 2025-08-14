@@ -1,81 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E.E.S.T.Nº4</title>
-    <link rel="stylesheet" href="estilos.css">
+    <title>Ecotec - Energía limpia</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
       <style>
     #map {
       height: 400px;
       width: 100%;
     }
   </style>
+<body>
 
     <header>
-        <div class="logo">
-            <img src="src/bibliotecaLogo.jfif" alt="logo-img">
-            <h2>Biblioteca</h2>
-        </div>
         <nav>
-            <a class="a-header-nav" href="insertarDatos/asociado.html">Registrarce</a>
-            <a href="insertarDatos/libros.php">Agregar Libro</a>
-            <a href="insertarDatos/prestamos.php">Prestamos</a>
-            <a href="administrar/">Administrar</a>
+            <div class="logo">Ecotec</div>
+            <ul>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#historia">Nuestra Historia</a></li>
+            </ul>
+            <a href="#contacto" class="btn-contacto">Contactate</a>
         </nav>
+
+        <section class="hero">
+            <h1>Energía limpia para un futuro sostenible</h1>
+            <p>Instalaciones profesionales, soporte técnico y ahorro energético</p>
+        </section>
     </header>
+
+    <!-- Contenido principal -->
     <main>
-        <div class="introduccion">
-            <img src="src/biblioteca.jpg " alt="img-biblioteca">
-            <div class="contenido">
-                <h3>Introduccion</h3>
-                <p>¡Te damos la más cordial bienvenida a nuestra página de biblioteca! Aquí encontrarás un espacio dedicado al fomento del conocimiento y la lectura. Nuestra misión es proporcionar acceso a una amplia colección de libros y recursos que abarquen desde la literatura clásica hasta las obras más contemporáneas.
-                    Con una interfaz fácil de usar y funciones que facilitan la gestión de préstamos y devoluciones, nuestra plataforma está diseñada para que tu experiencia sea tan enriquecedora como práctica. Puedes explorar nuestra colección, gestionar tus libros prestados y conocer las fechas de devolución con solo unos clics.                    
-                    Nos esforzamos por crear un entorno que celebre la pasión por la lectura y el aprendizaje, y esperamos que encuentres en nuestra biblioteca un aliado en tu viaje intelectual..</p>
+
+        <!-- Beneficios / características -->
+        <section class="beneficios">
+            <article>
+                <h3>Instalación Profesional</h3>
+                <p>Realizamos instalaciones con estándares de calidad y seguridad.</p>
+            </article>
+            <article>
+                <h3>Soporte Técnico</h3>
+                <p>Brindamos asistencia y mantenimiento especializado.</p>
+            </article>
+            <article>
+                <h3>Ahorro Energético</h3>
+                <p>Reducí costos utilizando energías limpias y renovables.</p>
+            </article>
+        </section>
+
+        <!-- Proyectos -->
+        <section id="proyectos">
+            <header>
+                <h2>Proyectos en acción</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </header>
+            <figure>
+                <img src="assets/img/proyecto.jpg" alt="Proyecto solar en acción">
+            </figure>
+        </section>
+
+        <!-- Tarjetas de categorías -->
+        <section class="categorias">
+            <article>
+                <img src="assets/img/proyectos.jpg" alt="Proyectos">
+                <h3>Proyectos</h3>
+                <p>Diseñamos diferentes proyectos para cubrir diferentes necesidades.</p>
+                <a href="#proyectos" class="btn">Ver más</a>
+            </article>
+            <article>
+                <img src="assets/img/productos.jpg" alt="Productos">
+                <h3>Productos</h3>
+                <p>Ofrecemos soluciones innovadoras y de calidad.</p>
+                <a href="#productos" class="btn">Ver más</a>
+            </article>
+            <article>
+                <img src="assets/img/servicios.jpg" alt="Servicios">
+                <h3>Servicios</h3>
+                <p>Brindamos asistencia integral y soporte técnico especializado.</p>
+                <a href="#servicios" class="btn">Ver más</a>
+            </article>
+        </section>
+
+        <!-- Empresas colaboradoras -->
+        <section class="empresas">
+            <h3>Trabajamos en conjunto con:</h3>
+            <div class="lista-empresas">
+                <div class="empresa">Empresa</div>
+                <div class="empresa">Empresa</div>
+                <div class="empresa">Empresa</div>
+                <div class="empresa">Empresa</div>
             </div>
-        </div>
-        <button onclick="obtenerUbicacion()">Mostrar mi ubicación</button>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer id="contacto">
+        <section class="footer-info">
+            <article>
+                <h4>Redes Sociales</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </article>
+            <article>
+                <h4>Dirección</h4>
+                <p>Calle Falsa 123, Buenos Aires</p>
+            </article>
+            <article>
+                <h4>Horarios</h4>
+                <p>Lunes a Viernes: 9:00 - 18:00</p>
+            </article>
+            <article>
+                <h4>Datos de contacto</h4>
+                <p>info@ecotec.com</p>
+                <p>contacto@ecotec.com</p>
+            </article>
+        </section>
+    </footer>
+<button onclick="obtenerUbicacion()">Mostrar mi ubicación</button>
   <div id="map"></div>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoHI7ebF_B-vYDY5fItyhDCYbnalNR1Yw"></script>
-        <script>
-    let map;
+<script>
+  let map;
 
-    function initMap(lat, lng) {
-      const ubicacion = new google.maps.LatLng(lat, lng);
+  function initMap() {
+    // Coordenadas fijas
+    const ubicacion = new google.maps.LatLng(-34.756083, -58.208930);
 
-      const opciones = {
-        center: ubicacion,
-        zoom: 15
-      };
+    const opciones = {
+      center: ubicacion,
+      zoom: 15
+    };
 
-      map = new google.maps.Map(document.getElementById('map'), opciones);
+    map = new google.maps.Map(document.getElementById('map'), opciones);
 
-      new google.maps.Marker({
-        position: ubicacion,
-        map: map,
-        title: "Estás aquí"
-      });
-    }
+    new google.maps.Marker({
+      position: ubicacion,
+      map: map,
+      title: "Ecotec - Buenos Aires"
+    });
+  }
 
-    function obtenerUbicacion() {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(
-          (pos) => {
-            const lat = pos.coords.latitude;
-            const lng = pos.coords.longitude;
-            initMap(lat, lng);
-          },
-          (error) => {
-            alert("Error al obtener la ubicación: " + error.message);
-          }
-        );
-      } else {
-        alert("Geolocalización no es soportada por este navegador.");
-      }
-    }
-  </script>
-    </main>
+  // Cargar el mapa cuando la página esté lista
+  window.onload = initMap;
+</script>
+
 </body>
 </html>
